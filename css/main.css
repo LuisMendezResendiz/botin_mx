@@ -104,7 +104,7 @@ section p {
 
 
 .left-sidebar {
-    background-color: #141d45;
+    background-color: #37BA98;
     float: left;
     min-height: 100%;
     position: fixed;
@@ -135,7 +135,7 @@ section p {
 }
 
 .left-nav ul li a:hover, .left-nav ul li .current {
-    background-color: #9820ec;
+    background-color: #D2E46D;
     color: #fff;
 }
 
@@ -233,13 +233,13 @@ section p {
     font-family: inherit;
     border: none;
     padding: 10px;
-    background-color: #141D45;
+    background-color: #37BA98;
     transition: all .3s ease;
 }
 
 .btn_container button:hover{
     box-shadow: 0px 3px 3px #ddd;
-    background-color: #9820EC;
+    background-color: #D2E46D;
 }
 
 .img_container{
