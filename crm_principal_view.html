@@ -19,73 +19,36 @@
 		<link rel="stylesheet" href="css/normalize.min.css">
 		<!-- Main CSS-->
 		<link rel="stylesheet" href="css/main.css">
-		<style type="text/css">
-			body, #left_tool_menu{
-				margin: 0;
-				padding: 0;
-			}
-			body{
-				padding: 0 0 0 50px;
-			}
-
-			#content{
-				padding: 50px !important;
-			}
-
-			#left_tool_menu{
-				height: 100%;
-				width: 50px;
-				margin-left: -50px;
-				background-color: #333333;
-				position: fixed;
-				z-index: 9999;
-			}
-
-			#left_tool_menu hr{
-				border: .5px solid gray;
-			}
-
-			.lateral_item{
-				height: 50px;
-				width: 50px;
-				transition: all .3s ease;
-			}
-			.lateral_item img{
-				height: 24px;
-				width: 24px;
-				margin: 13px;
-			}
-			.lateral_item:hover{
-				background-color: #05C7FF;
-				//*background-image: linear-gradient(#05C7FF, #479DE4, #8874C8,#D842AE);*/
-				cursor: pointer;
-			}
-
-
-		</style>
+		<link rel="stylesheet" href="css/crm_style.css">
 	</head>
 
 	<body>
 		<div id="left_tool_menu">
-			<div class="lateral_item" onclick="location.href='index.html'">
+			<div class="lateral_item tooltip" onclick="location.href='index.html'">
 				<img src="img/large_logo.png">
+				<span class="tooltiptext">Botín México</span>
 			</div>
 			<hr>
-			<div class="lateral_item">
+			<div class="lateral_item tooltip">
 				<img src="img/line-chart.png">
+				<span class="tooltiptext">Estadísticas</span>
 			</div>
-			<div class="lateral_item">
+			<div class="lateral_item tooltip">
 				<img src="img/users.png">
+				<span class="tooltiptext">Clientes</span>
 			</div>
-			<div class="lateral_item">
+			<div class="lateral_item tooltip">
 				<img src="img/mexican-republic-map.png">
+				<span class="tooltiptext">México</span>
 			</div>
-			<div class="lateral_item">
+			<div class="lateral_item tooltip">
 				<img src="img/settings-work-tool.png">
+				<span class="tooltiptext">Configuración</span>
 			</div>
 			<hr>
-			<div class="lateral_item" onclick="location.href='index.html'">
+			<div class="lateral_item tooltip" onclick="location.href='index.html'">
 				<img src="img/logout.png">
+				<span class="tooltiptext">Salir</span>
 			</div>
 		</div>
 
