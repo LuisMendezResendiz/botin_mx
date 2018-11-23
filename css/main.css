@@ -304,7 +304,7 @@ section p {
 	text-align: center !important;
 }
 
-#float_box input[type="text"], #float_box input[type="password"], #float_box input[type="button"] {
+#float_box input {
 	/*//background-color: red;*/
 	height: 40px;
 	margin: 5px;
@@ -340,6 +340,11 @@ section p {
 #float_box a {
 	margin: 15px;
 	color: white;
+}
+
+#float_box hr{
+	border: .5px solid white;
+	width: 75%;
 }
 
 
