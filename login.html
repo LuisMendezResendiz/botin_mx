@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<html lang="es">
+		<title>Botín México - Login</title>
+		<link rel="icon" type="image/png" href="img/favicon.png" />
+		<meta name="description" content="">
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="shortcut icon" href="img/favicon.png"> -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet'>
+		<!-- Syntax Highlighter -->
+		<link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shCore.css" media="all">
+		<link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shThemeDefault.css" media="all">
+		<!-- Font Awesome CSS-->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- Normalize/Reset CSS-->
+		<link rel="stylesheet" href="css/normalize.min.css">
+		<!-- Main CSS-->
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+
+	<body id="special_body" onload="setInterval(changeColor, 3000);">
+		<div id="container">
+			<div id="float_box">
+				<img src="img/large_logo.png"> <br>
+				<strong>Botín México</strong> <br><br><br>
+				<input type="text" name="user" placeholder="Usuario"><br>
+				<input type="password" name="password" placeholder="Contraseña"><br>
+				<input type="button" name="" value="Hola Mundo">
+				<br><br>
+				<a href="index.html">&#x293A; Regresar</a>
+				<a href="">Registrarse</a>
+				<br><br><br>
+			</div>
+		</div>
+
+
+		<!-- Scrpit para un cambio de color dinámico -->
+		<script type="text/javascript">
+			var i = 0;
+			function changeColor(){
+				if (i==0) {
+					document.body.style.backgroundColor="#D842AE";
+					i=1;
+				} else if (i==1) {
+					document.body.style.backgroundColor="#5EA8FF";
+					i=2;
+				} else if (i==2) {
+					document.body.style.backgroundColor="#FC3B4B";
+					i=0;
+				} else if (i==2) {
+					document.body.style.backgroundColor="#06C7FF";
+					i=0;
+				}
+			}
+		</script>
+
+	</body>
+</html>
