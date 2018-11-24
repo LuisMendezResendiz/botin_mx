@@ -19,6 +19,42 @@
 		<link rel="stylesheet" href="css/normalize.min.css">
 		<!-- Main CSS-->
 		<link rel="stylesheet" href="css/main.css">
+		<style type="text/css">
+			.box_lootboxes{
+				/*border: 1px solid red;*/
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+			}
+			.lootbox{
+				width: 30%;
+				height: auto;
+				/*height: 75px;*/
+				/*border: 1px solid green;*/
+				box-sizing: border-box !important;
+				box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+				cursor: pointer;
+			}
+			.lootbox h3, .lootbox p{
+				margin: 0 15px 0 15px;
+			}
+
+			.lootbox_img{
+				width: 100%;
+				height: 200px;
+				background-color: rgba(35,35,35,.05);
+				max-width: 100%;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				position: relative;
+			}
+
+			#img_lb_01{ background-image: url("img/img_lb_01.jpg");	}
+			#img_lb_02{ background-image: url("img/img_lb_02.jpg");	}
+			#img_lb_03{ background-image: url("img/img_lb_03.jpg");	}
+
+		</style>
 	</head>
 
 	<body id="welcome">
@@ -32,9 +68,9 @@
 			<nav class="left-nav">
 				<ul id="nav">
 					<li class="current"><a href="#welcome">Inicio</a></li>
+					<li><a href="#boxes">Lootboxes</a></li>
 					<li><a href="#sales">Ventas</a></li>
 					<li><a href="#providers">Proveedores</a></li>
-					<li><a href="#boxes">Lootboxes</a></li>
 					<li><a href="#about">Acerca de</a></li>
 					<li><a onclick="location.href='login.html'" style="cursor: pointer;">Login</a></li>
 					<li><a onclick="location.href='crm_principal_view.html'" style="cursor: pointer;">Experimental CRM</a></li>
@@ -46,7 +82,7 @@
 			<div class="main-content">
 				<section id="welcome">
 					<div class="content-header">
-						<h1>Inicio</h1>
+						<h1>Inicio TIENDA</h1>
 					</div>
 					<div class="welcome">
 						<h2 class="twenty">Bienvenido(a)</h2>
@@ -54,6 +90,37 @@
 
 						<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
 					</div>
+				</section>
+
+				<section id="boxes">
+					<div class="content-header">
+						<h1>Lootboxes</h1>
+					</div>
+					<h2 class="title">Aquí aparecerán las cajas de botín</h2>
+					<div class="box_lootboxes">
+						<div class="lootbox">
+							<div class="lootbox_img" id="img_lb_01"></div>
+							<br>
+							<h3>Caja 1</h3>
+							<p>Descripción</p>
+							<br>
+						</div>
+						<div class="lootbox">
+							<div class="lootbox_img" id="img_lb_02"></div>
+							<br>
+							<h3>Caja 2</h3>
+							<p>Descripción</p>
+							<br>
+						</div>
+						<div class="lootbox">
+							<div class="lootbox_img" id="img_lb_03"></div>
+							<br>
+							<h3>Caja 3</h3>							
+							<p>Descripción</p>
+							<br>
+						</div>
+					</div>
+					<br><br>
 				</section>
 
 				<section id="sales">
@@ -75,17 +142,6 @@
 
 					<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
 				</section>
-
-				<section id="boxes">
-					<div class="content-header">
-						<h1>Lootboxes</h1>
-					</div>
-					<h2 class="title">Aquí aparecerán las cajas de botín</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-
-					<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
-				</section>
-
 
 				<section id="about">
 					<div class="content-header twenty">

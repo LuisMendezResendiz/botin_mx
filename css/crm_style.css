@@ -1,72 +1,74 @@
-body, #left_tool_menu{
-				margin: 0;
-				padding: 0;
-			}
-			body{
-				padding: 0 0 0 50px;
-			}
+#left_tool_menu{
+	margin: 0;
+	padding: 0;
+}
 
-			#content{
-				padding: 50px !important;
-			}
+body{
+	padding: 0 0 0 50px;
+}
 
-			#left_tool_menu{
-				height: 100%;
-				width: 50px;
-				margin-left: -50px;
-				background-color: #333333;
-				position: fixed;
-				z-index: 9999;
-			}
+#content{
+	padding: 50px !important;
+}
 
-			#left_tool_menu hr{
-				border: .5px solid gray;
-			}
+#left_tool_menu{
+	height: 100%;
+	width: 50px;
+	margin-left: -50px;
+	background-color: #333333;
+	position: fixed;
+	z-index: 9999;
+}
 
-			.lateral_item{
-				height: 50px;
-				width: 50px;
-				cursor: pointer;
-				/*transition: all .3s ease;*/
-			}
-			.lateral_item img{
-				height: 24px;
-				width: 24px;
-				margin: 13px;
-			}
-			.lateral_item:hover{
-				background-color: #05C7FF;
-				/*background-image: linear-gradient(#05C7FF, #479DE4, #8874C8,#D842AE);*/
-			}
+#left_tool_menu hr{
+	border: .5px solid gray;
+}
 
-			/*************************************************/
+.lateral_item{
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+	/*transition: all .3s ease;*/
+}
 
-			.tooltip {
-				position: relative;
-				display: inline-block;
-				/*border-bottom: 1px dotted black;*/
-			}
+.lateral_item img{
+	height: 24px;
+	width: 24px;
+	margin: 13px;
+}
 
-			.tooltip .tooltiptext {
-				visibility: hidden;
-				height: 50px;
-				width: 150px;
-				background-color: #05C7FF;
-				color: #fff;
-				text-align: center;
-				/*border-radius: 6px;*/
-				padding: 15px;
-				font-size: 1.1em;
-				font-weight: bold;
-				box-sizing: border-box;
+.lateral_item:hover{
+	background-color: #05C7FF;
+	/*background-image: linear-gradient(#05C7FF, #479DE4, #8874C8,#D842AE);*/
+}
+
+/*************************************************/
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+	/*border-bottom: 1px dotted black;*/
+}
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	height: 50px;
+	width: 150px;
+	background-color: #05C7FF;
+	color: #fff;
+	text-align: center;
+	padding: 15px;
+	font-size: 1.1em;
+	font-weight: bold;
+	box-sizing: border-box;
 				
-				/* Position the tooltip */
-				position: absolute;
-				z-index: 1;
-				top: 0px;
-				left: 100%;
-			}
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	left: 100%;
+}
 
-			.tooltip:hover .tooltiptext {
-				visibility: visible;
-			}
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
