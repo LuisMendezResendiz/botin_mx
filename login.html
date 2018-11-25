@@ -19,17 +19,35 @@
 		<link rel="stylesheet" href="css/normalize.min.css">
 		<!-- Main CSS-->
 		<link rel="stylesheet" href="css/main.css">
+		<!-- FIREBASE -->
+		<script src="js/login.js"></script>		
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyCnuEnAbOC_l6BPWPGeXeWN9WGoKeQiIaE",
+		    authDomain: "botin-mx.firebaseapp.com",
+		    databaseURL: "https://botin-mx.firebaseio.com",
+		    projectId: "botin-mx",
+		    storageBucket: "botin-mx.appspot.com",
+		    messagingSenderId: "101539424046"
+		  };
+		  firebase.initializeApp(config);
+		  	// Initialize Cloud Firestore through Firebase
+      		var db = firebase.firestore();
+		</script>
 	</head>
 
-	<body id="special_body" onload="setInterval(changeColor, 3000);">
+	<body id="special_body" onload="setInterval(changeColor, 3000); comprobar();">
 		<div id="container">
 			<div id="float_box">
 				<img src="img/large_logo.png"> <br>
 				<strong>Botín México</strong> <br><hr>
 				<strong style="font-size: 1.2em;">Iniciar sesión</strong><br><br><br>
-				<input type="text" name="user" placeholder="Usuario"><br>
-				<input type="password" name="password" placeholder="Contraseña"><br>
-				<input type="button" name="" value="Acceder">
+				<input type="text" name="user" placeholder="Usuario" id="user"><br>
+				<input type="password" name="password" placeholder="Contraseña" id="pass"><br>
+				<input type="button" name="" value="Acceder" onclick="login()">
 				<br><br>
 				<a href="index.html">&#x293A; Regresar</a>
 				<a href="sign_up.html">Registrarse</a>
