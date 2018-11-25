@@ -8,10 +8,15 @@ function login(){
 	  var errorMessage = error.message;
 	  // ...
 	});
-	sessionStorage.setItem('correo', correo);
+	localStorage.setItem('correo', correo);
 	//comprobar();
+	db.collection('usuarios').doc(correo)
+		.get().then(function(doc){
+			localStorage.setItem('usuario', doc.data().usuario);
+		}).catch(function(error) {
+		    console.log("Error getting document:", error);
+		});
 }
-
 
 function comprobar(){
 	var correo = document.getElementById('user').value;

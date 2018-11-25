@@ -26,7 +26,7 @@ function salir(){
 	firebase.auth().signOut().then(function() {
   		// Sign-out successful.
   		// alert("Sesion cerrada");
-  		sessionStorage.clear();
+  		localStorage.clear();
   		alert("Se ha cerrado la sesión");
 	    location.href = "index.html";
 
