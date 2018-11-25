@@ -19,6 +19,25 @@
 		<link rel="stylesheet" href="css/normalize.min.css">
 		<!-- Main CSS-->
 		<link rel="stylesheet" href="css/main.css">
+
+		<!-- FIREBASE -->
+		<script src="js/registro.js"></script>		
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyCnuEnAbOC_l6BPWPGeXeWN9WGoKeQiIaE",
+		    authDomain: "botin-mx.firebaseapp.com",
+		    databaseURL: "https://botin-mx.firebaseio.com",
+		    projectId: "botin-mx",
+		    storageBucket: "botin-mx.appspot.com",
+		    messagingSenderId: "101539424046"
+		  };
+		  firebase.initializeApp(config);
+		  	// Initialize Cloud Firestore through Firebase
+      		var db = firebase.firestore();
+		</script>
 	</head>
 
 	<body id="special_body" onload="setInterval(changeColor, 3000);">
@@ -27,10 +46,10 @@
 				<img src="img/large_logo.png"> <br>
 				<strong>Botín México</strong> <br><hr>
 				<strong style="font-size: 1.2em;">Registro</strong><br><br><br>
-				<input type="text" name="user" placeholder="Usuario"><br>
-				<input type="password" name="password" placeholder="Contraseña"><br>
-				<input type="email" name="user" placeholder="E-mail"><br>
-				<input type="button" name="" value="Aceptar">
+				<input type="text" name="user" placeholder="Usuario" id="user"><br>
+				<input type="password" name="password" placeholder="Contraseña" id="pass"><br>
+				<input type="email" name="user" placeholder="E-mail" id="email"><br>
+				<input type="button" name="" value="Aceptar" onclick="registrar()">
 				<br><br>
 				<a href="index.html">&#x293A; Regresar</a>
 				<a href="login.html">Ya tengo una cuenta</a>
