@@ -19,6 +19,24 @@
 		<link rel="stylesheet" href="css/normalize.min.css">
 		<!-- Main CSS-->
 		<link rel="stylesheet" href="css/main.css">
+		<!-- FIREBASE -->
+		<script src="js/salir.js"></script>		
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyCnuEnAbOC_l6BPWPGeXeWN9WGoKeQiIaE",
+		    authDomain: "botin-mx.firebaseapp.com",
+		    databaseURL: "https://botin-mx.firebaseio.com",
+		    projectId: "botin-mx",
+		    storageBucket: "botin-mx.appspot.com",
+		    messagingSenderId: "101539424046"
+		  };
+		  firebase.initializeApp(config);
+		  	// Initialize Cloud Firestore through Firebase
+      		var db = firebase.firestore();
+		</script>
 		<style type="text/css">
 			.box_lootboxes{
 				/*border: 1px solid red;*/
@@ -57,7 +75,7 @@
 		</style>
 	</head>
 
-	<body id="welcome">
+	<body id="welcome" onload="comprobar()">
 		<aside class="left-sidebar">
 			<div class="logo">
 				<a href="#welcome" id="float_box" style="margin-left: 40px;">

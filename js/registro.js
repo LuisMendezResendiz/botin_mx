@@ -8,7 +8,10 @@ function registrar(){
 	console.log(correo);
 	console.log(pass);
 
-	if(pass.length>=6){
+	if(nombre == '' || correo == '' || pass == ''){
+		alert("Por favor completa los campos señalados.");
+		return false;
+	}else if(pass.length>=6){
 		//if(pass == pass2){
 			try{
 				firebase.auth().createUserWithEmailAndPassword(correo, pass);

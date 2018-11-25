@@ -1,24 +1,10 @@
-function login(){
-	var correo = document.getElementById('user').value;
-	var pass = document.getElementById('pass').value;
-
-	firebase.auth().signInWithEmailAndPassword(correo, pass).catch(function(error) {
-	  // Handle Errors here.
-	  var errorCode = error.code;
-	  var errorMessage = error.message;
-	  // ...
-	});
-	sessionStorage.setItem('correo', correo);
-	//comprobar();
-}
-
-
 function comprobar(){
-	var correo = document.getElementById('user').value;
+	var correo = sessionStorage.getItem("correo");
+	var lout = document.getElementById('nav');
 	firebase.auth().onAuthStateChanged(function(user){
 	  if (user) {
-	  	alert("Sesion iniciada");
-	    location.href = "index.html";
+	    lout.innerHTML += "<li><a onclick='salir()' style='cursor: pointer;'>Salir</a></li>";
+	    
 	    // User is signed in.
 	  	var displayName = user.displayName;
 	    var email = user.email;
@@ -33,5 +19,19 @@ function comprobar(){
 	    console.log("No existe un usuario activo")
 	    // ...
 	  }
+	});
+}
+
+function salir(){
+	firebase.auth().signOut().then(function() {
+  		// Sign-out successful.
+  		// alert("Sesion cerrada");
+  		sessionStorage.clear();
+  		alert("Se ha cerrado la sesión");
+	    location.href = "index.html";
+
+	}).catch(function(error) {
+		// An error happened.
+		console.log(error);
 	});
 }
