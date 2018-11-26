@@ -162,7 +162,7 @@
 							</div>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
 							<div class="btn_container">
-								<button onclick="location.href='purchasing_process.html'" class="btn_hover_color_01">Comprar</button>
+								<button id="basico" onclick="location.href='purchasing_process.html'; env(this.id)" class="btn_hover_color_01">Comprar</button>
 							</div>
 							<br>
 						</div>
@@ -174,7 +174,7 @@
 							</div>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
 							<div class="btn_container">
-								<button onclick="location.href='purchasing_process.html'" class="btn_hover_color_02">Comprar</button>
+								<button id="premium" onclick="location.href='purchasing_process.html'; env(this.id)" class="btn_hover_color_02">Comprar</button>
 							</div>
 							<br>
 						</div>
@@ -186,7 +186,7 @@
 							</div>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
 							<div class="btn_container">
-								<button onclick="location.href='purchasing_process.html'" class="btn_hover_color_03">Comprar</button>
+								<button id="platino" onclick="location.href='purchasing_process.html'; env(this.id)" class="btn_hover_color_03">Comprar</button>
 							</div>
 							<hr>
 							<p>Aquí habrá más opciones</p>
@@ -255,5 +255,10 @@
 		</script>
 		<script type="text/javascript" src="js/custom.js"></script>
 		<script type="text/javascript" src="js/loading_screen.js"></script>
+		<script type="text/javascript">
+			function env(id){
+				sessionStorage.setItem('tipo',id);
+			}
+		</script>
 	</body>
 </html>
