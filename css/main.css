@@ -358,15 +358,17 @@ section p {
 .lootbox{
 	background-color: white;
 	width: 30%;
-	height: 300px;
+	height: auto;
 	margin-top: -75px;
 	box-sizing: border-box !important;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	cursor: pointer;
+	text-align: center;
 }
 
 .lootbox h3, .lootbox p{
 	margin: 0 15px 0 15px;
+	line-height: 1.3em;
 }
 .lootbox h3{
 	font-weight: bold;
@@ -374,15 +376,51 @@ section p {
 
 .lootbox_img{
 	width: 100%;
-	height: 200px;
-	background-color: rgba(35,35,35,.05);
-	max-width: 100%;
+	padding: 30px 0;
+	text-align: center;
+	/*background-color: rgba(35,35,35,.05);*/
+	/*max-width: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	position: relative;
+	position: relative;*/
 }
 
-#img_lb_01{ background-image: url("../img/img_lb_01.jpg") !important; }
-#img_lb_02{ background-image: url("../img/img_lb_02.jpg") !important; }
-#img_lb_03{ background-image: url("../img/img_lb_03.jpg") !important; }
+.lb_title_01{
+	color: #D642AE;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.lb_title_02{
+	color: #7480D0;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.lb_title_03{
+	color: #05C6FE;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.lootbox_logo img{
+	height: 50px;
+}
+
+.lootbox_logo{
+	margin-bottom: 5px !important;
+}
+
+.lootbox_img div{
+	border: 4px solid;
+	border-radius: 15px;
+	margin: auto;
+	padding: 5px;
+	width: 50px;
+	height: 50px;
+}
+
+#img_lb_01{ border-color: #D642AE !important; }
+#img_lb_02{ border-color: #7480D0 !important; }
+#img_lb_03{ border-color: #05C6FE !important; }
