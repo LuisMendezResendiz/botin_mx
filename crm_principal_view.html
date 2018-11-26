@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<html lang="es">
-		<title>Botín México - Sign in</title>
+		<title>Botín México - CRM</title>
 		<link rel="icon" type="image/png" href="img/favicon.png" />
 		<meta name="description" content="">
 		<!-- Mobile Specific Meta -->
@@ -43,7 +43,8 @@
 				vAxis: {title: 'Cups'},
 				hAxis: {title: 'Month'},
 				seriesType: 'bars',
-				series: {5: {type: 'line'}}
+				series: {5: {type: 'line'}},
+				colors: ['#05C7FF', '#479DE4', '#8874C8', '#D842AE', '#f3b49f']
 				};
 
 				var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
@@ -54,11 +55,9 @@
 
 	<body>
 		<div id="left_tool_menu">
-			<div class="tooltip" onclick="location.href='index.html'">
-				<div class="lateral_item">
-					<span>Botín México</span>
-					<img src="img/large_logo.png">
-				</div>
+			<div class="lateral_item" onclick="location.href='#welcome'">
+				<span>BMex CRM</span>
+				<img src="img/large_logo.png">
 			</div>
 			<hr>
 			<div class="lateral_item" onclick="location.href='#sales'">
@@ -98,11 +97,11 @@
 			</section>
 
 			<section id="sales">
-					<div class="content-header">
-						<h1>Ventas</h1>
-					</div>
-					<div id="chart_div" style="width: 100%; height: 75vh;"></div>
+				<div class="content-header">
+					<h1>Ventas</h1>
+				</div>
+				<div id="chart_div" style="width: 100%; height: 75vh;"></div>
 			</section>
-		</div>		
+		</div>
 	</body>
 </html>

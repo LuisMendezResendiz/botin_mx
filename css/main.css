@@ -99,44 +99,45 @@ section p {
 
 
 .main-content section {
-  margin: 0 5%;
+  padding: 0 5%;
+  background-color: #F2F2F2;
 }
 
-
 .left-sidebar {
-	background-image: linear-gradient(#05C7FF, #479DE4, #8874C8,#D842AE);
-	/*background-color: #37BA98;*/
 	float: left;
 	min-height: 100%;
 	position: fixed;
 	width: 18%;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.logo {
-	padding-bottom: 30px;
-	padding-left: 30px;
-	padding-top: 70px;
+.left-nav{
+	width: 100%;
 }
 
 .left-nav ul {
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	font-size: 1em;
 }
 
 .left-nav ul li a {
-	color: #fff;
 	display: block;
+	color: #757575;
 	padding: 10px 35px;
-	-webkit-transition: all 0.3s ease-in 0s;
+	/*-webkit-transition: all 0.3s ease-in 0s;
 	   -moz-transition: all 0.3s ease-in 0s;
 		-ms-transition: all 0.3s ease-in 0s;
 		 -o-transition: all 0.3s ease-in 0s;
-			transition: all 0.3s ease-in 0s;
+			transition: all 0.3s ease-in 0s;*/
 }
 
 .left-nav ul li a:hover, .left-nav ul li .current {
-	background-color: #333333;
+	background-image: linear-gradient(to right, #05C7FF, #479DE4, #8874C8,#D842AE);
 	font-weight: bold;
 	color: #fff;
 }
@@ -151,7 +152,6 @@ section p {
 .content-header {
 	border-bottom: 1px solid #ddd;
 	border-top: 1px solid #ddd;
-	margin-top: 30px;
 	padding: 30px 0 35px;
 	text-align: center;
 }
@@ -347,5 +347,38 @@ section p {
 	width: 75%;
 }
 
+/********************Lootboxes*************************/
 
+.box_lootboxes{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
 
+.lootbox{
+	background-color: white;
+	width: 30%;
+	height: auto;
+	box-sizing: border-box !important;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	cursor: pointer;
+}
+
+.lootbox h3, .lootbox p{
+	margin: 0 15px 0 15px;
+}
+
+.lootbox_img{
+	width: 100%;
+	height: 200px;
+	background-color: rgba(35,35,35,.05);
+	max-width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+#img_lb_01{ background-image: url("../img/img_lb_01.jpg") !important; }
+#img_lb_02{ background-image: url("../img/img_lb_02.jpg") !important; }
+#img_lb_03{ background-image: url("../img/img_lb_03.jpg") !important; }

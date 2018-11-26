@@ -38,51 +38,52 @@
       		var db = firebase.firestore();
 		</script>
 		<style type="text/css">
-			.box_lootboxes{
-				/*border: 1px solid red;*/
-				width: 100%;
-				display: flex;
-				justify-content: space-between;
+			body{
+				/*background-color: #F2F2F2;*/	
+				background-position: center; /* Center the image */
+  				background-repeat: no-repeat; /* Do not repeat the image */
+  				background-size: cover;
+  				background-attachment: fixed;
+
+  				-webkit-transition: background-image 0.5s ease-in-out;
+				transition: background-image 0.5s ease-in-out;
 			}
-			.lootbox{
-				width: 30%;
-				height: auto;
-				/*height: 75px;*/
-				/*border: 1px solid green;*/
-				box-sizing: border-box !important;
-				box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-				cursor: pointer;
-			}
-			.lootbox h3, .lootbox p{
-				margin: 0 15px 0 15px;
+			.left-social{
+				position: fixed;
+				align-self: flex-end;
+				padding: 10px;
+				justify-content: flex-end;
 			}
 
-			.lootbox_img{
-				width: 100%;
-				height: 200px;
-				background-color: rgba(35,35,35,.05);
-				max-width: 100%;
-				background-position: center;
+			.left-social img{
+				width: 25px;
+				margin: 5px;
+			}
+
+			#index_bg{
+				height: 100vh;
+				background-image: url("img/bg_01.png");
 				background-repeat: no-repeat;
-				background-size: cover;
-				position: relative;
+				background-attachment: fixed;
+				background-size: 82% auto;
+				background-position: right;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 			}
-
-			#img_lb_01{ background-image: url("img/img_lb_01.jpg");	}
-			#img_lb_02{ background-image: url("img/img_lb_02.jpg");	}
-			#img_lb_03{ background-image: url("img/img_lb_03.jpg");	}
-
+			#index_logo{
+				border: 10px solid white;
+				padding: 30px;
+				border-radius: 35px;
+			}
+			#index_logo img{
+				width: 125px;
+			}
 		</style>
 	</head>
 
 	<body id="welcome" onload="comprobar()">
 		<aside class="left-sidebar">
-			<div class="logo">
-				<a href="#welcome" id="float_box" style="margin-left: 40px;">
-					<img src="img/large_logo.png"> <br>
-					<strong>Botín México</strong>
-				</a>
-			</div>
 			<nav class="left-nav">
 				<ul id="nav">
 					<li class="current"><a href="#welcome">Inicio</a></li>
@@ -94,11 +95,23 @@
 					<li><a onclick="location.href='crm_principal_view.html'" style="cursor: pointer;">Experimental CRM</a></li>
 				</ul>
 			</nav>
+			<div class="left-social">
+				<img src="img/fb.png">
+				<img src="img/tw.png">
+				<img src="img/im.png">
+			</div>
 		</aside>
 
 		<div id="main-wrapper">
 			<div class="main-content">
+				<section id="index_bg">
+					<div id="index_logo">
+						<img src="img/large_logo.png">
+					</div>
+					
+				</section>
 				<section id="welcome">
+					<br><br>
 					<div class="content-header">
 						<h1>Inicio TIENDA</h1>
 					</div>
@@ -107,10 +120,11 @@
 						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
 
 						<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
+						<button onclick="cambiar()">Cambiar imagen</button>
 					</div>
 				</section>
 
-				<section id="boxes">
+				<section id="boxes"  onmouseover="cambiar_1();">
 					<div class="content-header">
 						<h1>Lootboxes</h1>
 					</div>
@@ -141,7 +155,7 @@
 					<br><br>
 				</section>
 
-				<section id="sales">
+				<section id="sales" onmouseover="cambiar_2();">
 					<div class="content-header">
 						<h1>Ventas</h1>
 					</div>
@@ -168,9 +182,9 @@
 					<p>
 						<div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 					</p>
+					<br><br>
 				</section>
 			</div>
-			<br><br>
 		</div>
 
 		<!-- Essential JavaScript Libraries
@@ -186,5 +200,22 @@
 			SyntaxHighlighter.all()
 		</script>
 		<script type="text/javascript" src="js/custom.js"></script>
+		<script type="text/javascript">
+			// function cambiar_1(){
+			// 	document.body.style.backgroundImage = "url('img/img_lb_01.jpg')";	
+			// }
+
+			// function cambiar_2(){
+			// 	document.body.style.backgroundImage = "url('img/img_lb_02.jpg')";	
+			// }
+
+			// window.onscroll = function() {myFunction()};
+
+			// function myFunction() {
+			//    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+			//       document.body.style.backgroundImage = "url('img/bg_01.jpg')";	
+			//    }
+			// }
+		</script>
 	</body>
 </html>
