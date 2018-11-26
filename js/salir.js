@@ -4,7 +4,7 @@ function comprobar(){
 	firebase.auth().onAuthStateChanged(function(user){
 	  if (user) {
 	    lout.innerHTML += "<li><a onclick='salir()' style='cursor: pointer;'>Salir</a></li>";
-	    
+	    document.getElementById("p_user").innerHTML = localStorage.getItem('usuario');
 	    // User is signed in.
 	  	var displayName = user.displayName;
 	    var email = user.email;
