@@ -33,8 +33,8 @@ function registrar(){
 						document.getElementById('email').value = '';
 						document.getElementById('pass').value = '';
 						//document.getElementById('conpass').value = '';
+						firebase.auth().createUserWithEmailAndPassword(correo, pass);
 					}
-				firebase.auth().createUserWithEmailAndPassword(correo, pass);
 				})
 			}catch(error){
 				var errorCode = error.code;
