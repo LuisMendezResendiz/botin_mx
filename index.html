@@ -106,6 +106,9 @@
 	</head>
 
 	<body id="welcome" onload="comprobar()">
+		<div id="loading_screen" onclick="preload_screen()">
+			<img src="img/loading_01.gif">
+		</div>
 		<aside class="left-sidebar">
 			<div class="left-user" onclick="location.href='login.html'">
 				<img src="img/user.png">
@@ -139,40 +142,33 @@
 				<section>
 					<div class="box_lootboxes">
 						<div class="lootbox" id="boxes">
-							<div class="lootbox_img">
-								<div class="lootbox_logo" id="img_lb_01">
-									<img src="img/box_01.png">
-								</div>
-								<strong class="lb_title_01">Lootbox uno</strong>
+							<div class="lootbox_title">
+								<img src="img/lb_logo_01.png">
+								<h2 class="lb_text_01">Lootbox uno</h2>
+								<h3 class="lb_text_01">$ 00.000.00 MXN</h3>
 							</div>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
 							<br>
-							<strong class="lb_title_01">$ 00,000.00 MXN</strong>
-							<br><br>
 						</div>
-						<div class="lootbox">
-							<div class="lootbox_img">
-								<div class="lootbox_logo" id="img_lb_02">
-									<img src="img/box_02.png">
-								</div>
-								<strong class="lb_title_02">Lootbox uno</strong>
+						<div class="lootbox" id="boxes">
+							<div class="lootbox_title">
+								<img src="img/lb_logo_02.png">
+								<h2 class="lb_text_02">Lootbox dos</h2>
+								<h3 class="lb_text_02">$ 00.000.00 MXN</h3>
 							</div>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
 							<br>
-							<strong class="lb_title_02">$ 00,000.00 MXN</strong>
-							<br><br>
 						</div>
-						<div class="lootbox">
-							<div class="lootbox_img">
-								<div class="lootbox_logo" id="img_lb_03">
-									<img src="img/box_03.png">
-								</div>
-								<strong class="lb_title_03">Lootbox uno</strong>
+						<div class="lootbox" id="boxes">
+							<div class="lootbox_title">
+								<img src="img/lb_logo_03.png">
+								<h2 class="lb_text_03">Lootbox tres</h2>
+								<h3 class="lb_text_03">$ 00.000.00 MXN</h3>
 							</div>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+							<hr>
+							<p>Aquí habrá más opciones</p>
 							<br>
-							<strong class="lb_title_03">$ 00,000.00 MXN</strong>
-							<br><br>
 						</div>
 					</div>
 					<br><br>
@@ -227,14 +223,15 @@
 		==============================================-->
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="js/jquery.nav.js"></script>
-		<script type="text/javascript" src="syntax-highlighter/scripts/shCore.js"></script>
+<!-- 		<script type="text/javascript" src="syntax-highlighter/scripts/shCore.js"></script>
 		<script type="text/javascript" src="syntax-highlighter/scripts/shBrushXml.js"></script>
 		<script type="text/javascript" src="syntax-highlighter/scripts/shBrushCss.js"></script>
 		<script type="text/javascript" src="syntax-highlighter/scripts/shBrushJScript.js"></script>
-		<script type="text/javascript" src="syntax-highlighter/scripts/shBrushPhp.js"></script>
+		<script type="text/javascript" src="syntax-highlighter/scripts/shBrushPhp.js"></script> -->
 		<script type="text/javascript">
 			SyntaxHighlighter.all()
 		</script>
 		<script type="text/javascript" src="js/custom.js"></script>
+		<script type="text/javascript" src="js/loading_screen.js"></script>
 	</body>
 </html>

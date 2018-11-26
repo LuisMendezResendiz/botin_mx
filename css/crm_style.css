@@ -13,7 +13,7 @@ body{
 	padding: 0;
 	background-color: #333333;
 	position: fixed;
-	z-index: 9999;
+	z-index: 8;
 }
 
 #left_tool_menu hr{

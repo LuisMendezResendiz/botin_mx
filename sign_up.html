@@ -41,12 +41,15 @@
 	</head>
 
 	<body id="special_body" onload="setInterval(changeColor, 3000);">
+		<div id="loading_screen" onclick="preload_screen()">
+			<img src="img/loading_01.gif">
+		</div>
 		<div id="container">
 			<div id="float_box">
 				<img src="img/large_logo.png"> <br>
 				<strong>Botín México</strong> <br><hr>
 				<strong style="font-size: 1.2em;">Registro</strong><br><br><br>
-				<input type="text" name="user" placeholder="Usuario" id="user"><br>
+				<input type="text" name="user" placeholder="Nombre" id="user"><br>
 				<input type="password" name="password" placeholder="Contraseña" id="pass"><br>
 				<input type="email" name="user" placeholder="E-mail" id="email"><br>
 				<input type="button" name="" value="Aceptar" onclick="registrar()">
@@ -59,5 +62,6 @@
 
 		<!-- Scrpit para un cambio de color dinámico -->
 		<script type="text/javascript" src="js/dynamic_bg_color.js"></script>
+		<script type="text/javascript" src="js/loading_screen.js"></script>
 	</body>
 </html>
