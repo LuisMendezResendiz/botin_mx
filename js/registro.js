@@ -14,8 +14,6 @@ function registrar(){
 	}else if(pass.length>=6){
 		//if(pass == pass2){
 			try{
-				firebase.auth().createUserWithEmailAndPassword(correo, pass);
-
 				var docRef = db.collection("usuarios").doc(correo);
 				docRef.get().then(function(doc){
 					if(doc.exists){
@@ -36,6 +34,7 @@ function registrar(){
 						document.getElementById('pass').value = '';
 						//document.getElementById('conpass').value = '';
 					}
+				firebase.auth().createUserWithEmailAndPassword(correo, pass);
 				})
 			}catch(error){
 				var errorCode = error.code;
