@@ -48,6 +48,7 @@
   				-webkit-transition: background-image 0.5s ease-in-out;
 				transition: background-image 0.5s ease-in-out;
 			}
+
 			.left-social{
 				position: fixed;
 				align-self: flex-end;
@@ -58,6 +59,25 @@
 			.left-social img{
 				width: 25px;
 				margin: 5px;
+				cursor: pointer;
+			}
+
+			.left-user{
+				position: fixed;
+				align-self: flex-start;
+				padding: 10px;
+				cursor: pointer;
+			}
+
+			.left-user img{
+				width: 25px;
+				margin: 5px;
+				float: left;
+			}
+
+			.left-user p{
+				float: left;
+				margin: 8px;
 			}
 
 			#index_bg{
@@ -71,19 +91,26 @@
 				align-items: center;
 				justify-content: center;
 			}
+
 			#index_logo{
 				border: 10px solid white;
 				padding: 30px;
 				border-radius: 35px;
+				margin-top: -75px;
 			}
+
 			#index_logo img{
-				width: 125px;
+				width: 100px;
 			}
 		</style>
 	</head>
 
 	<body id="welcome" onload="comprobar()">
 		<aside class="left-sidebar">
+			<div class="left-user">
+				<img src="img/user.png">
+				<p>Benito Benítez</p>
+			</div>
 			<nav class="left-nav">
 				<ul id="nav">
 					<li class="current"><a href="#welcome">Inicio</a></li>
@@ -108,8 +135,35 @@
 					<div id="index_logo">
 						<img src="img/large_logo.png">
 					</div>
-					
 				</section>
+
+				<section id="boxes"  onmouseover="cambiar_1();">
+					<div class="box_lootboxes">
+						<div class="lootbox">
+							<!-- <div class="lootbox_img" id="img_lb_01"></div> -->
+							<br>
+							<h3>Caja 1</h3>
+							<p>Descripción</p>
+							<br>
+						</div>
+						<div class="lootbox">
+							<!-- <div class="lootbox_img" id="img_lb_02"></div> -->
+							<br>
+							<h3>Caja 2</h3>
+							<p>Descripción</p>
+							<br>
+						</div>
+						<div class="lootbox">
+							<!-- <div class="lootbox_img" id="img_lb_03"></div> -->
+							<br>
+							<h3>Caja 3</h3>							
+							<p>Descripción</p>
+							<br>
+						</div>
+					</div>
+					<br><br>
+				</section>
+
 				<section id="welcome">
 					<br><br>
 					<div class="content-header">
@@ -122,37 +176,6 @@
 						<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
 						<button onclick="cambiar()">Cambiar imagen</button>
 					</div>
-				</section>
-
-				<section id="boxes"  onmouseover="cambiar_1();">
-					<div class="content-header">
-						<h1>Lootboxes</h1>
-					</div>
-					<h2 class="title">Aquí aparecerán las cajas de botín</h2>
-					<div class="box_lootboxes">
-						<div class="lootbox">
-							<div class="lootbox_img" id="img_lb_01"></div>
-							<br>
-							<h3>Caja 1</h3>
-							<p>Descripción</p>
-							<br>
-						</div>
-						<div class="lootbox">
-							<div class="lootbox_img" id="img_lb_02"></div>
-							<br>
-							<h3>Caja 2</h3>
-							<p>Descripción</p>
-							<br>
-						</div>
-						<div class="lootbox">
-							<div class="lootbox_img" id="img_lb_03"></div>
-							<br>
-							<h3>Caja 3</h3>							
-							<p>Descripción</p>
-							<br>
-						</div>
-					</div>
-					<br><br>
 				</section>
 
 				<section id="sales" onmouseover="cambiar_2();">
