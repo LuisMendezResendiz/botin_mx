@@ -107,9 +107,9 @@
 
 	<body id="welcome" onload="comprobar()">
 		<aside class="left-sidebar">
-			<div class="left-user">
+			<div class="left-user" onclick="location.href='login.html'">
 				<img src="img/user.png">
-				<p>Benito Benítez</p>
+				<p>Iniciar sesión</p>
 			</div>
 			<nav class="left-nav">
 				<ul id="nav">
@@ -118,7 +118,6 @@
 					<li><a href="#sales">Ventas</a></li>
 					<li><a href="#providers">Proveedores</a></li>
 					<li><a href="#about">Acerca de</a></li>
-					<li><a onclick="location.href='login.html'" style="cursor: pointer;">Login</a></li>
 					<li><a onclick="location.href='crm_principal_view.html'" style="cursor: pointer;">Experimental CRM</a></li>
 				</ul>
 			</nav>
@@ -189,11 +188,10 @@
 						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
 
 						<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
-						<button onclick="cambiar()">Cambiar imagen</button>
 					</div>
 				</section>
 
-				<section id="sales" onmouseover="cambiar_2();">
+				<section id="sales">
 					<div class="content-header">
 						<h1>Ventas</h1>
 					</div>
@@ -238,22 +236,5 @@
 			SyntaxHighlighter.all()
 		</script>
 		<script type="text/javascript" src="js/custom.js"></script>
-		<script type="text/javascript">
-			// function cambiar_1(){
-			// 	document.body.style.backgroundImage = "url('img/img_lb_01.jpg')";	
-			// }
-
-			// function cambiar_2(){
-			// 	document.body.style.backgroundImage = "url('img/img_lb_02.jpg')";	
-			// }
-
-			// window.onscroll = function() {myFunction()};
-
-			// function myFunction() {
-			//    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-			//       document.body.style.backgroundImage = "url('img/bg_01.jpg')";	
-			//    }
-			// }
-		</script>
 	</body>
 </html>
