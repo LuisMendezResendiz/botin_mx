@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<html lang="es">
+		<title>Botín México</title>
+		<link rel="icon" type="image/png" href="img/favicon.png" />
+		<meta name="description" content="">
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="shortcut icon" href="img/favicon.png"> -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet'>
+		<!-- Syntax Highlighter -->
+		<link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shCore.css" media="all">
+		<link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shThemeDefault.css" media="all">
+		<!-- Font Awesome CSS-->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- Normalize/Reset CSS-->
+		<link rel="stylesheet" href="css/normalize.min.css">
+		<!-- Main CSS-->
+		<link rel="stylesheet" href="css/main.css">
+		<!-- FIREBASE -->
+		<script src="js/salir.js"></script>		
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyCnuEnAbOC_l6BPWPGeXeWN9WGoKeQiIaE",
+		    authDomain: "botin-mx.firebaseapp.com",
+		    databaseURL: "https://botin-mx.firebaseio.com",
+		    projectId: "botin-mx",
+		    storageBucket: "botin-mx.appspot.com",
+		    messagingSenderId: "101539424046"
+		  };
+		  firebase.initializeApp(config);
+		  	// Initialize Cloud Firestore through Firebase
+      		var db = firebase.firestore();
+		</script>
+		<style type="text/css">
+			body{
+				background-color: #F2F2F2;	
+				background-position: center; /* Center the image */
+  				background-repeat: no-repeat; /* Do not repeat the image */
+  				background-size: cover;
+  				background-attachment: fixed;
+
+  				-webkit-transition: background-image 0.5s ease-in-out;
+				transition: background-image 0.5s ease-in-out;
+			}
+
+			.left-social{
+				position: fixed;
+				align-self: flex-end;
+				padding: 10px;
+				justify-content: flex-end;
+			}
+
+			.left-social img{
+				width: 25px;
+				margin: 5px;
+				cursor: pointer;
+			}
+
+			.left-user{
+				position: fixed;
+				align-self: flex-start;
+				padding: 10px;
+				cursor: pointer;
+			}
+
+			.left-user img{
+				width: 25px;
+				margin: 5px;
+				float: left;
+			}
+
+			.left-user p{
+				float: left;
+				margin: 8px;
+			}
+
+			#index_bg{
+				height: 35vh;
+				background-image: url("img/bg_01.png");
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: 82% auto;
+				background-position: right bottom;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+			}
+
+			#index_bg > div{
+				display: flex;
+				margin-top: -75px;
+			}
+
+			#index_bg h1{
+				color: white;
+				align-self: flex-start;				
+				text-transform: uppercase;
+				font-size: 1.2em;
+				margin-top: 8px;
+    			margin-left: 8px;
+			}
+
+			#index_logo{
+				border: 2px solid white;
+				padding: 5px;
+				border-radius: 5px;				
+			}
+
+			#index_logo img{
+				width: 25px;
+			}
+
+			/******************************************************/
+
+			.lootbox{
+				width: 100% !important;
+			}
+
+		</style>
+	</head>
+
+	<body id="welcome" onload="comprobar()">
+		<div id="loading_screen" onclick="preload_screen()">
+			<img src="img/loading_01.gif">
+		</div>
+		<aside class="left-sidebar">
+			<div class="left-user">
+				<img src="img/user.png">
+				<p id="p_user">Nombre del usuario</p>
+			</div>
+			<nav class="left-nav">
+				<ul id="nav">
+					<li class="current"><a href="#welcome">Información de compra</a></li>
+					<li><a href="#providers">Proveedores</a></li>
+					<li><a href="#sales">Ventas</a></li>
+					<li><a href="index.html" onclick="location.href='index.html'" style="cursor: pointer;">&#x293A; Regresar</a></li>
+				</ul>
+			</nav>
+			<div class="left-social">
+				<img src="img/fb.png">
+				<img src="img/tw.png">
+				<img src="img/im.png">
+			</div>
+		</aside>
+
+		<div id="main-wrapper">
+			<div class="main-content">
+				<section id="index_bg">
+					<div>
+						<div id="index_logo">
+							<img src="img/large_logo.png">
+						</div>
+						<h1>Botín México</h1>
+					</div>	
+				</section>
+
+				<section>
+					<div class="box_lootboxes">
+						<div class="lootbox" id="boxes">
+							<br>
+							<
+							<div id="container" style="height: auto !important;">
+								<div id="float_box" style="width: 100%;">									
+									<input type="text" name="dir" placeholder="Dirección"><br>
+									<input type="number" name="dir" placeholder="Número de tarjeta"><br>
+									<select>
+									    <option value="0">Selecciona tu estado</option>
+									    <option value="1">Estado de México</option>
+									    <option value="2">Querétaro</option>
+									    <option value="3">Jalisco</option>
+ 									</select><br>
+									<input type="button" name="" value="Comprar" onclick="login()"><br>
+								</div>
+							</div>
+							<br>
+						</div>
+					</div>
+				</section>
+
+				<section id="providers">
+					<br><br>
+					<div class="content-header">
+						<h1>Proveedores</h1>
+					</div>
+					<h2 class="title">Aquí aparecerán los proveedores</h2>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+					<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.</p>
+				</section>
+				<br><br>
+			</div>
+		</div>
+
+		<!-- Essential JavaScript Libraries
+		==============================================-->
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery.nav.js"></script>
+		<script type="text/javascript">
+			SyntaxHighlighter.all()
+		</script>
+		<script type="text/javascript" src="js/custom.js"></script>
+		<script type="text/javascript" src="js/loading_screen.js"></script>
+	</body>
+</html>
