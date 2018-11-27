@@ -29,6 +29,8 @@ function registrar(){
 						})
 
 						alert("Registro realizado con exito");
+						localStorage.setItem('correo', correo);
+						localStorage.setItem('usuario', nombre);
 						document.getElementById('user').value = '';
 						document.getElementById('email').value = '';
 						document.getElementById('pass').value = '';

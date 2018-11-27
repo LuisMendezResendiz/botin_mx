@@ -37,8 +37,8 @@ function drawVisualization() {
 
 function graf(est, numEst){
 	var data = google.visualization.arrayToDataTable([
-		[est[0], est[1], est[2], est[3]],
-		[numEst[0], numEst[1], numEst[2], numEst[3]]
+		[est[0], est[1], est[2], est[3], est[4], est[5], est[6], est[7], est[8], est[9], est[10]],
+		[numEst[0], numEst[1], numEst[2], numEst[3], numEst[4], numEst[5], numEst[6], numEst[7], numEst[8], numEst[9], numEst[10]]
 	]);
 
 
@@ -47,7 +47,6 @@ function graf(est, numEst){
 	vAxis: {title: 'Compras'},
 	hAxis: {title: 'Estado'},
 	seriesType: 'bars',
-	series: {5: {type: 'line'}},
 	colors: ['#05C7FF', '#479DE4', '#8874C8', '#D842AE', '#f3b49f']
 	};
 
