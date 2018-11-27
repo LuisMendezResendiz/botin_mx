@@ -79,7 +79,7 @@ body{
 
 .handcrafts_box{
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 .handcrafts_card{
@@ -101,22 +101,27 @@ body{
 .info_handcrafts {
 	display: flex;
 	align-items: center;
-	background-color: transparent;
 	height: 100%;
-	color: transparent;
-	-webkit-transition: background-color 0.3s ease;
-	transition: background-color 0.3s ease;
+	background-color: rgba(255,255,255,.85);
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	visibility: hidden;
+	opacity: 0;
+	padding: 40px;
+	box-sizing: border-box;
 }
 
-.info_handcrafts:hover{
-	background-color: white;
-	color: inherit;
+.handcrafts_card:hover .info_handcrafts{
+	visibility: visible;
+	opacity: 1;
+	cursor: default;
 }
 
 .info_handcrafts p {
-	padding: 15px;
+	padding:  10px;
 	line-height: 1.1em;
-	color: inherit;
+	color: black;
+	border: 3px solid #E93976;
 }
 
 #img_handcrafts_1 { background-image: url(../img/handcrafts/handcrafts_01.jpg); }

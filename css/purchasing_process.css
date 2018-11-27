@@ -1,0 +1,82 @@
+body {
+	background-color: #F2F2F2; 
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover;
+	background-attachment: fixed;
+
+	-webkit-transition: background-image 0.5s ease-in-out;
+	transition: background-image 0.5s ease-in-out;
+}
+
+.left-social {
+	position: fixed;
+	align-self: flex-end;
+	padding: 10px;
+	justify-content: flex-end;
+}
+
+.left-social img {
+	width: 25px;
+	margin: 5px;
+	cursor: pointer;
+}
+
+.left-user {
+	position: fixed;
+	align-self: flex-start;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.left-user img {
+	width: 25px;
+	margin: 5px;
+	float: left;
+}
+
+.left-user p {
+	float: left;
+	margin: 8px;
+}
+
+#index_bg {
+	height: 35vh;
+	background-image: url("../img/bg_01.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 82% auto;
+	background-position: right bottom;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+#index_bg > div {
+	display: flex;
+	margin-top: -75px;
+}
+
+#index_bg h1 {
+	color: white;
+	align-self: flex-start;    
+	text-transform: uppercase;
+	font-size: 1.2em;
+	margin-top: 8px;
+	margin-left: 8px;
+}
+
+#index_logo {
+	border: 2px solid white;
+	padding: 5px;
+	border-radius: 5px;    
+}
+
+#index_logo img { width: 25px; }
+
+/******************************************************/
+
+.lootbox {
+	width: 100% !important;
+	padding: 30px !important;
+}

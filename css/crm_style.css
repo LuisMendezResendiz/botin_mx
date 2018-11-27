@@ -59,3 +59,27 @@ body{
 	width: 100%
 	height: 75vh;
 }
+
+
+/**************************************************/
+
+
+
+#loading_screen_02{
+	position: fixed;
+	margin-left: -50 !important;
+	z-index: 9999 !important;
+	background-color: #E93976;
+	transform: translateX(-50px);
+	height: 100vh;
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/*visibility: hidden;*/
+}
+
+#loading_screen_02 img{
+	height: 250px;
+}

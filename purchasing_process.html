@@ -19,6 +19,8 @@
 		<link rel="stylesheet" href="css/normalize.min.css">
 		<!-- Main CSS-->
 		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/purchasing_process.css">
+
 		<!-- FIREBASE -->
 		<script src="js/comprar.js"></script>		
 		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
@@ -37,92 +39,6 @@
 		  	// Initialize Cloud Firestore through Firebase
       		var db = firebase.firestore();
 		</script>
-		<style type="text/css">
-			body{
-				background-color: #F2F2F2;	
-				background-position: center; /* Center the image */
-  				background-repeat: no-repeat; /* Do not repeat the image */
-  				background-size: cover;
-  				background-attachment: fixed;
-
-  				-webkit-transition: background-image 0.5s ease-in-out;
-				transition: background-image 0.5s ease-in-out;
-			}
-
-			.left-social{
-				position: fixed;
-				align-self: flex-end;
-				padding: 10px;
-				justify-content: flex-end;
-			}
-
-			.left-social img{
-				width: 25px;
-				margin: 5px;
-				cursor: pointer;
-			}
-
-			.left-user{
-				position: fixed;
-				align-self: flex-start;
-				padding: 10px;
-				cursor: pointer;
-			}
-
-			.left-user img{
-				width: 25px;
-				margin: 5px;
-				float: left;
-			}
-
-			.left-user p{
-				float: left;
-				margin: 8px;
-			}
-
-			#index_bg{
-				height: 35vh;
-				background-image: url("img/bg_01.png");
-				background-repeat: no-repeat;
-				background-attachment: fixed;
-				background-size: 82% auto;
-				background-position: right bottom;
-				display: flex;
-				align-items: center;
-				justify-content: flex-end;
-			}
-
-			#index_bg > div{
-				display: flex;
-				margin-top: -75px;
-			}
-
-			#index_bg h1{
-				color: white;
-				align-self: flex-start;				
-				text-transform: uppercase;
-				font-size: 1.2em;
-				margin-top: 8px;
-    			margin-left: 8px;
-			}
-
-			#index_logo{
-				border: 2px solid white;
-				padding: 5px;
-				border-radius: 5px;				
-			}
-
-			#index_logo img{
-				width: 25px;
-			}
-
-			/******************************************************/
-
-			.lootbox{
-				width: 100% !important;
-			}
-
-		</style>
 	</head>
 
 	<body id="welcome" onload="comprobar()">
@@ -137,8 +53,7 @@
 			<nav class="left-nav">
 				<ul id="nav">
 					<li class="current"><a href="#welcome">Información de compra</a></li>
-					<li><a href="#providers">Proveedores</a></li>
-					<li><a href="#sales">Ventas</a></li>
+					<li><a href="#providers">Información legal</a></li>
 					<li><a href="index.html" onclick="location.href='index.html'" style="cursor: pointer;">&#x293A; Regresar</a></li>
 				</ul>
 			</nav>
@@ -163,8 +78,9 @@
 				<section>
 					<div class="box_lootboxes">
 						<div class="lootbox" id="boxes">
-							<br>
-							<
+							<div class="content-header twenty">
+								<h1>Información de compra</h1>
+							</div>
 							<div id="container" style="height: auto !important;">
 								<div id="float_box" style="width: 100%;">									
 									<input type="text" name="dir" placeholder="Dirección" id="dir"><br>
@@ -178,7 +94,6 @@
 									<input type="button" name="" value="Comprar" onclick="compra()"><br>
 								</div>
 							</div>
-							<br>
 						</div>
 					</div>
 				</section>
@@ -186,9 +101,9 @@
 				<section id="providers">
 					<br><br>
 					<div class="content-header">
-						<h1>Proveedores</h1>
+						<h1>Información legal</h1>
 					</div>
-					<h2 class="title">Aquí aparecerán los proveedores</h2>
+					<h2 class="title">Aquí aparecerán los acuerdos legales de la compra</h2>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
 
 					<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.</p>
