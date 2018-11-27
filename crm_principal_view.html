@@ -23,33 +23,24 @@
 
 		<!-- Google Charts -->
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-		<script type="text/javascript">
-			google.charts.load('current', {'packages':['corechart']});
-			google.charts.setOnLoadCallback(drawVisualization);
+		<script src="js/crm.js"></script>
 
-			function drawVisualization() {
-			// Some raw data (not necessarily accurate)
-				var data = google.visualization.arrayToDataTable([
-				['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],
-				['2004/05',  165,      938,         522,             998,           450,      614.6],
-				['2005/06',  135,      1120,        599,             1268,          288,      682],
-				['2006/07',  157,      1167,        587,             807,           397,      623],
-				['2007/08',  139,      1110,        615,             968,           215,      609.4],
-				['2008/09',  136,      691,         629,             1026,          366,      569.6]
-				]);
-
-				var options = {
-				title : 'Monthly Coffee Production by Country',
-				vAxis: {title: 'Cups'},
-				hAxis: {title: 'Month'},
-				seriesType: 'bars',
-				series: {5: {type: 'line'}},
-				colors: ['#05C7FF', '#479DE4', '#8874C8', '#D842AE', '#f3b49f']
-				};
-
-				var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
-				chart.draw(data, options);
-			}
+		<!-- FIREBASE -->
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyCnuEnAbOC_l6BPWPGeXeWN9WGoKeQiIaE",
+		    authDomain: "botin-mx.firebaseapp.com",
+		    databaseURL: "https://botin-mx.firebaseio.com",
+		    projectId: "botin-mx",
+		    storageBucket: "botin-mx.appspot.com",
+		    messagingSenderId: "101539424046"
+		  };
+		  firebase.initializeApp(config);
+		  	// Initialize Cloud Firestore through Firebase
+      		var db = firebase.firestore();
 		</script>
 	</head>
 
@@ -101,6 +92,7 @@
 					<h1>Ventas</h1>
 				</div>
 				<div id="chart_div" style="width: 100%; height: 75vh;"></div>
+				<div id="chart_div2" style="width: 100%; height: 75vh;"></div>
 			</section>
 		</div>
 	</body>
