@@ -15,6 +15,7 @@ function login(){
 			localStorage.setItem('usuario', doc.data().usuario);
 		}).catch(function(error) {
 		    console.log("Error getting document:", error);
+		    alert("Los datos son incorrectos");
 		});
 }
 
