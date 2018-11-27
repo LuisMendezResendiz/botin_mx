@@ -1,0 +1,125 @@
+body{
+	/*background-color: #F2F2F2;*/	
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover;
+	background-attachment: fixed;
+
+	-webkit-transition: background-image 0.5s ease-in-out;
+	transition: background-image 0.5s ease-in-out;
+}
+
+.left-social{
+	position: fixed;
+	align-self: flex-end;
+	padding: 10px;
+	justify-content: flex-end;
+}
+
+.left-social img{
+	width: 25px;
+	margin: 5px;
+	cursor: pointer;
+}
+
+.left-user{
+	position: fixed;
+	align-self: flex-start;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.left-user img{
+	width: 25px;
+	margin: 5px;
+	float: left;
+}
+
+.left-user p{
+	float: left;
+	margin: 8px;
+}
+
+#index_bg{
+	height: 100vh;
+	background-image: url("../img/bg_01.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 82% auto;
+	background-position: right bottom;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#index_bg h1{
+	position: absolute;
+	color: white;
+	float: right;
+	align-self: flex-start;
+	margin-left: calc(50% - 205px);
+	margin-top: 8px;
+	text-transform: uppercase;
+	font-size: 1.2em;
+}
+
+#index_logo{
+	border: 6px solid white;
+	padding: 25px;
+	border-radius: 35px;
+	margin-top: -75px;
+}
+
+#index_logo img{
+	width: 90px;
+}
+
+
+/*************************************GALERIA DE HISTORIAS*************************************/
+
+.handcrafts_box{
+	display: flex;
+	justify-content: space-between;
+}
+
+.handcrafts_card{
+	background-color: white;
+	width: 25%;
+	height: 300px;
+	/*box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.18);*/
+}
+
+.img_handcrafts{
+	width: 100%;
+	height: 100%;
+	background-color: #757575;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.info_handcrafts {
+	display: flex;
+	align-items: center;
+	background-color: transparent;
+	height: 100%;
+	color: transparent;
+	-webkit-transition: background-color 0.3s ease;
+	transition: background-color 0.3s ease;
+}
+
+.info_handcrafts:hover{
+	background-color: white;
+	color: inherit;
+}
+
+.info_handcrafts p {
+	padding: 15px;
+	line-height: 1.1em;
+	color: inherit;
+}
+
+#img_handcrafts_1 { background-image: url(../img/handcrafts/handcrafts_01.jpg); }
+#img_handcrafts_2 { background-image: url(../img/handcrafts/handcrafts_02.jpg); }
+#img_handcrafts_3 { background-image: url(../img/handcrafts/handcrafts_03.jpg); }
+#img_handcrafts_4 { background-image: url(../img/handcrafts/handcrafts_04.jpg); }

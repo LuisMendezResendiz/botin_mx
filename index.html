@@ -19,6 +19,7 @@
 		<link rel="stylesheet" href="css/normalize.min.css">
 		<!-- Main CSS-->
 		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/index.css">
 		<!-- FIREBASE -->
 		<script src="js/salir.js"></script>		
 		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
@@ -37,84 +38,6 @@
 		  	// Initialize Cloud Firestore through Firebase
       		var db = firebase.firestore();
 		</script>
-		<style type="text/css">
-			body{
-				/*background-color: #F2F2F2;*/	
-				background-position: center; /* Center the image */
-  				background-repeat: no-repeat; /* Do not repeat the image */
-  				background-size: cover;
-  				background-attachment: fixed;
-
-  				-webkit-transition: background-image 0.5s ease-in-out;
-				transition: background-image 0.5s ease-in-out;
-			}
-
-			.left-social{
-				position: fixed;
-				align-self: flex-end;
-				padding: 10px;
-				justify-content: flex-end;
-			}
-
-			.left-social img{
-				width: 25px;
-				margin: 5px;
-				cursor: pointer;
-			}
-
-			.left-user{
-				position: fixed;
-				align-self: flex-start;
-				padding: 10px;
-				cursor: pointer;
-			}
-
-			.left-user img{
-				width: 25px;
-				margin: 5px;
-				float: left;
-			}
-
-			.left-user p{
-				float: left;
-				margin: 8px;
-			}
-
-			#index_bg{
-				height: 100vh;
-				background-image: url("img/bg_01.png");
-				background-repeat: no-repeat;
-				background-attachment: fixed;
-				background-size: 82% auto;
-				background-position: right bottom;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-
-			#index_bg h1{
-				position: absolute;
-				color: white;
-				float: right;
-				align-self: flex-start;
-				margin-left: calc(50% - 205px);
-				margin-top: 8px;
-				text-transform: uppercase;
-				font-size: 1.2em;
-			}
-
-			#index_logo{
-				border: 6px solid white;
-				padding: 25px;
-				border-radius: 35px;
-				margin-top: -75px;
-			}
-
-			#index_logo img{
-				width: 90px;
-			}
-
-		</style>
 	</head>
 
 	<body id="welcome" onload="comprobar()">
@@ -130,7 +53,7 @@
 				<ul id="nav">
 					<li class="current"><a href="#welcome">Inicio</a></li>
 					<li><a href="#boxes">Lootboxes</a></li>
-					<li><a href="#sales">Ventas</a></li>
+					<li><a href="#handcrafts">Manos Artesanas</a></li>
 					<li><a href="#providers">Proveedores</a></li>
 					<li><a href="#about">Acerca de</a></li>
 					<li><a onclick="location.href='crm_principal_view.html'" style="cursor: pointer;">Experimental CRM</a></li>
@@ -160,7 +83,9 @@
 								<h2 class="lb_text_01">Lootbox uno</h2>
 								<h3 class="lb_text_01">$ 00.000.00 MXN</h3>
 							</div>
+							<br>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+							<br>
 							<div class="btn_container">
 								<button id="Basico" onclick="location.href='purchasing_process.html'; env(this.id)" class="btn_hover_color_01">Comprar</button>
 							</div>
@@ -172,7 +97,9 @@
 								<h2 class="lb_text_02">Lootbox dos</h2>
 								<h3 class="lb_text_02">$ 00.000.00 MXN</h3>
 							</div>
+							<br>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+							<br>
 							<div class="btn_container">
 								<button id="Intermedio" onclick="location.href='purchasing_process.html'; env(this.id)" class="btn_hover_color_02">Comprar</button>
 							</div>
@@ -184,7 +111,9 @@
 								<h2 class="lb_text_03">Lootbox tres</h2>
 								<h3 class="lb_text_03">$ 00.000.00 MXN</h3>
 							</div>
+							<br>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+							<br>
 							<div class="btn_container">
 								<button id="Platinum" onclick="location.href='purchasing_process.html'; env(this.id)" class="btn_hover_color_03">Comprar</button>
 							</div>
@@ -207,16 +136,47 @@
 
 						<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
 					</div>
+					<br><br>
 				</section>
 
-				<section id="sales">
+				<section id="handcrafts">
 					<div class="content-header">
-						<h1>Ventas</h1>
+						<h1>Manos Artesanas</h1>
 					</div>
-					<h2 class="title">Aquí aparecerán las gráficas</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+					<h2 class="title">Conoce el origen de cada uno de nuestros objetos</h2>
+					
+					<div class="handcrafts_box">
+						<div class="handcrafts_card">
+							<div class="img_handcrafts" id="img_handcrafts_1">
+								<div class="info_handcrafts">
+									<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+								</div>
+							</div>
+						</div>
+						<div class="handcrafts_card">
+							<div class="img_handcrafts" id="img_handcrafts_2">
+								<div class="info_handcrafts">
+									<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+								</div>
+							</div>
+						</div>
+						<div class="handcrafts_card">
+							<div class="img_handcrafts" id="img_handcrafts_3">
+								<div class="info_handcrafts">
+									<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+								</div>
+							</div>
+						</div>
+						<div class="handcrafts_card">
+							<div class="img_handcrafts" id="img_handcrafts_4">
+								<div class="info_handcrafts">
+									<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+								</div>
+							</div>
+						</div>
+					</div>
 
-					<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
+					<br><br>
 				</section>
 
 				<section id="providers">
