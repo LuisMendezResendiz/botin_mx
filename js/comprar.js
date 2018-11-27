@@ -1,6 +1,6 @@
-function registrar(){
-	//var tipo = sessionStorage.getItem('paquete');
-	//var estado = document.getElementById('estado').value;
+function compra(){
+	var tipo = sessionStorage.getItem('tipo');
+	var estado = document.getElementById('estado').value;
 
 	console.log(tipo);
 	console.log(estado);
@@ -10,10 +10,10 @@ function registrar(){
 		var num = 1;
 		docRef.get().then(function(doc){
 			if(doc.exists){
-				alert("El correo ya esta siendo en uso");
+				//alert("El correo ya esta siendo en uso");
 				db.collection('estados').doc(estado)
 					.get().then(function(doc) {
-						var actualizar = doc.data().estado;
+						var actualizar = doc.data().conteo;
 						actualizar = actualizar + 1;
 
 				        db.collection('estados').doc(estado).update({
@@ -23,7 +23,7 @@ function registrar(){
 						}).catch(function(error){
 							console.error(error);
 						})
-						registrar2();
+						compra2();
 
 					}).catch(function(error) {
 					    console.log("Error getting document:", error);
@@ -38,7 +38,7 @@ function registrar(){
 				    console.log("Document written with ID: ", docRef.estado);
 				})
 				//document.getElementById('conpass').value = '';
-				registrar2();
+				compra2();
 			}
 		})
 	}catch(error){
@@ -47,8 +47,8 @@ function registrar(){
 	}
 }
 
-function registrar2(){
-	//var tipo = sessionStorage.getItem('paquete');
+function compra2(){
+	var tipo = sessionStorage.getItem('tipo');
 
 	console.log(tipo);
 
@@ -57,10 +57,10 @@ function registrar2(){
 		var num = 1;
 		docRef.get().then(function(doc){
 			if(doc.exists){
-				alert("El correo ya esta siendo en uso");
+				//alert("El correo ya esta siendo en uso");
 				db.collection('paquetes').doc(tipo)
 					.get().then(function(doc) {
-						var actualizar2 = doc.data().tipo;
+						var actualizar2 = doc.data().numero;
 						actualizar2 = actualizar2 + 1;
 
 				        db.collection('paquetes').doc(tipo).update({
