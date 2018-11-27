@@ -51,7 +51,7 @@
 
       function drawRegionsMap() {
         var data = google.visualization.arrayToDataTable([
-          ['State', 'Accent'],
+          ['State', 'Ventas totales'],
           ['Baja California', 10],
           ['Sonora', 0],
           ['Chihuahua', 0],
@@ -105,6 +105,34 @@
         chart.draw(data, options);
       };
 		</script>
+
+		<script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['Month', 'Sur Sureste', 'Centro País', 'Noreste', 'Centro Occidente', 'Noroeste', 'Promedio'],
+          ['2017-3',  65,      38,         22,             98,           5,      14.6],
+          ['2017-4',  35,      120,        99,             68,          8,       62],
+          ['2018-1',  57,      167,        87,             7,            9,      56],
+          ['2018-2',  39,      110,        15,             68,           15,     9.4],
+          ['2018-3',  36,      91,         29,             26,           6,      69.6]
+        ]);
+
+        var options = {
+          vAxis: {title: 'Ventas'},
+          hAxis: {title: 'Trimestre'},
+          seriesType: 'bars',
+          series: {5: {type: 'line'}},
+          colors: ['#05C7FF', '#479DE4', '#8874C8', '#C151B6','#E93976', 'red']
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div_03'));
+        chart.draw(data, options);
+      }
+    </script>
 	</head>
 
 	<body>
@@ -117,8 +145,8 @@
 				<img src="img/large_logo.png">
 			</div>
 			<hr>
-			<div class="lateral_item" onclick="location.href='#sales'">
-				<span>Estadísticas</span>
+			<div class="lateral_item" onclick="location.href='#today'">
+				<span>Hoy</span>
 				<img src="img/line-chart.png">
 			</div>
 			<div class="lateral_item">
@@ -141,31 +169,32 @@
 		</div>
 
 		<div id="content">
-			<section id="welcome">
+			<section id="welcome" class="twenty">
 				<div class="content-header" style="margin-top: 0px;">
 					<h1>Customer Relationship Management</h1>
 				</div>
 				<div class="welcome">
-					<h2 class="twenty">Aquí aparecerán los gráficos</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-
-					<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
+					<p>El CRM Analítico utiliza el modelo de negocio Business Inteligence, en el que está integrado un almacén de datos perteneciente a la empresa denominado DataWarehouse y el Data Mining o la explotación de datos para conocer el comportamiento del cliente.</p>
 				</div>
 			</section>
 
-			<section id="sales">
+			<section id="today"  class="twenty">
 				<div class="content-header">
-					<h1>Ventas</h1>
+					<h1>Últimas ventas</h1>
 				</div>
 				<div id="chart_div" style="width: 100%; height: 75vh;"></div>
 				<div id="chart_div2" style="width: 100%; height: 75vh;"></div>
 			</section>
 
-			<section id="mexico">
-				<div class="content-header">
-					<h1>Ventas</h1>
+			<section id="mexico"  class="twenty">
+				<div class="content-header twenty">
+					<h1>México</h1>
 				</div>
+				<h2>Ventas totales por estado</h2>
 				<div id="geochart-colors" style="width: 70%; height: 85vh; margin: auto;"></div>
+				<br><br>
+				<h2>Histograma por mesorregiones</h2>
+				<div id="chart_div_03" style="width: 100%; height: 75vh;"></div>
 			</section>
 		
 		</div>
